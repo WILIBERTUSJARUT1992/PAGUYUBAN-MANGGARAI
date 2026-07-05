@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dashboard Paguyuban</title>
 <link rel="stylesheet" href="style.css">
+
+<!-- 🔐 LOCK LOGIN (WAJIB DI ATAS) -->
+<script>
+  if (localStorage.getItem("login") !== "true") {
+    window.location.replace("index.html");
+  }
+</script>
+
 </head>
 
 <body>
@@ -12,20 +20,16 @@
 <!-- SCRIPT -->
 <script src="script.js"></script>
 
-<script>
-  cekLogin();
-</script>
-
 <!-- SIDEBAR -->
 <div class="sidebar">
 
   <h2>MENU</h2>
 
-  <a href="#">👤 Anggota</a>
-  <a href="#">📰 Berita</a>
-  <a href="#">🖼️ Galeri</a>
-  <a href="#">📢 Pengumuman</a>
-  <a href="#">⚙️ Pengaturan</a>
+  <a href="#" onclick="alert('Menu Anggota Aktif')">👤 Anggota</a>
+  <a href="#" onclick="alert('Menu Berita')">📰 Berita</a>
+  <a href="#" onclick="alert('Menu Galeri')">🖼️ Galeri</a>
+  <a href="#" onclick="alert('Menu Pengumuman')">📢 Pengumuman</a>
+  <a href="#" onclick="alert('Menu Pengaturan')">⚙️ Pengaturan</a>
 
   <a href="#" onclick="logout()">🚪 Logout</a>
 
