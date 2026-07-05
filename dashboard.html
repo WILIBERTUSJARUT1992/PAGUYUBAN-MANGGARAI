@@ -9,6 +9,7 @@
 
 <body>
 
+<!-- SCRIPT -->
 <script src="script.js"></script>
 
 <script>
@@ -40,7 +41,7 @@
   <!-- CARD STATISTIK -->
   <div class="card">
     <h3>Total Anggota</h3>
-    <p>120 User</p>
+    <p id="totalAnggota">0 User</p>
   </div>
 
   <div class="card">
@@ -53,10 +54,7 @@
     <p>🟢 ONLINE</p>
   </div>
 
-  <!-- ========================= -->
-  <!-- FORM ANGGOTA (BARU) -->
-  <!-- ========================= -->
-
+  <!-- FORM ANGGOTA -->
   <div class="card">
 
     <h3>➕ TAMBAH ANGGOTA</h3>
@@ -89,14 +87,20 @@
 
     <h3>📋 DAFTAR ANGGOTA</h3>
 
+    <input type="text" id="search" placeholder="Cari nama..." onkeyup="searchAnggota()">
+
     <ul id="listAnggota"></ul>
+
+    <button onclick="hapusSemua()">🧹 Hapus Semua</button>
 
   </div>
 
 </div>
 
+<!-- LOAD DATA -->
 <script>
   tampilkanAnggota();
+  updateTotal();
 </script>
 
 </body>
