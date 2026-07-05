@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Anggota</title>
+<link rel="stylesheet" href="style.css">
+
+<script>
+if(localStorage.getItem("login")!="true"){
+window.location.replace("index.html");
+}
+</script>
+
+</head>
+<body>
+
+<script src="script.js"></script>
+
+<div class="sidebar">
+
+<h2>MENU</h2>
+
+<a href="dashboard.html">🏠 Dashboard</a>
+<a href="anggota.html">👤 Anggota</a>
+<a href="berita.html">📰 Berita</a>
+<a href="galeri.html">🖼️ Galeri</a>
+<a href="pengumuman.html">📢 Pengumuman</a>
+<a href="pengaturan.html">⚙️ Pengaturan</a>
+
+<a href="#" onclick="logout()">🚪 Logout</a>
+
+</div>
+
+<div class="main">
+
+<h1>👤 DATA ANGGOTA</h1>
+
+<input type="text" id="search" placeholder="Cari Nama..." onkeyup="searchAnggota()">
+
+<ul id="listAnggota"></ul>
+
+</div>
+
+<script>
+tampilkanAnggota();
+updateTotal();
+</script>
+
+</body>
+</html>
