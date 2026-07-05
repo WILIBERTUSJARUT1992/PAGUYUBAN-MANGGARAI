@@ -30,8 +30,7 @@
   <a href="berita.html">📰 Berita</a>
   <a href="galeri.html">🖼️ Galeri</a>
   <a href="pengumuman.html">📢 Pengumuman</a>
-  <a href="pengaturan.html">⚙️ Pengaturan</a>
-
+  <a id="menuPengaturan" href="pengaturan.html">⚙️ Pengaturan</a>
   <a href="#" onclick="logout()">🚪 Logout</a>
 
 </div>
@@ -96,7 +95,7 @@
 
     <ul id="listAnggota"></ul>
 
-    <button onclick="hapusSemua()">🧹 Hapus Semua</button>
+    <button id="btnHapusSemua" onclick="hapusSemua()">🧹 Hapus Semua</button>
 
   </div>
 
@@ -106,6 +105,7 @@
 <script>
   tampilkanAnggota();
   updateTotal();
+  cekRole();
 </script>
 
 </body>
