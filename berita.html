@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Berita</title>
+<link rel="stylesheet" href="style.css">
+
+<script>
+if(localStorage.getItem("login")!="true"){
+window.location.replace("index.html");
+}
+</script>
+
+</head>
+
+<body>
+
+<script src="script.js"></script>
+
+<div class="sidebar">
+
+<h2>MENU</h2>
+
+<a href="dashboard.html">🏠 Dashboard</a>
+<a href="anggota.html">👤 Anggota</a>
+<a href="berita.html">📰 Berita</a>
+<a href="galeri.html">🖼️ Galeri</a>
+<a href="pengumuman.html">📢 Pengumuman</a>
+<a href="pengaturan.html">⚙️ Pengaturan</a>
+
+<a href="#" onclick="logout()">🚪 Logout</a>
+
+</div>
+
+<div class="main">
+
+<h1>📰 BERITA</h1>
+
+<div class="card">
+Belum ada berita.
+</div>
+
+</div>
+
+</body>
+</html>
