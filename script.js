@@ -7,9 +7,14 @@ function tambahAnggota() {
   let divisi = document.getElementById("divisi").value;
   let onoff = document.getElementById("onoff").value;
 
-  if (!nama || !jk || !statusAnggota || !code || !hp || !divisi || !onoff) {
-    alert("Semua data harus diisi!");
+  if (!nama || !jk || !statusAnggota || !hp || !divisi || !onoff) {
+    alert("Data wajib diisi!");
     return;
+  }
+
+  // AUTO CODE kalau kosong
+  if (!code) {
+    code = "AGT-" + Math.floor(Math.random() * 10000);
   }
 
   let data = JSON.parse(localStorage.getItem("anggota")) || [];
@@ -52,6 +57,7 @@ function tampilkanAnggota() {
         🔘 ${item.onoff}<br><br>
 
         <button onclick="hapusAnggota(${index})">Hapus</button>
+        <button onclick="editAnggota(${index})">Edit</button>
       </li>
     `;
   });
@@ -75,11 +81,13 @@ function hapusSemua() {
   updateTotal();
 }
 
-// SEARCH
+// SEARCH (FIXED)
 function searchAnggota() {
   let keyword = document.getElementById("search").value.toLowerCase();
   let data = JSON.parse(localStorage.getItem("anggota")) || [];
   let list = document.getElementById("listAnggota");
+
+  if (!list) return;
 
   list.innerHTML = "";
 
@@ -102,6 +110,27 @@ function updateTotal() {
   if (total) {
     total.innerText = data.length + " User";
   }
+}
+
+// EDIT ANGGOTA
+function editAnggota(index) {
+  let data = JSON.parse(localStorage.getItem("anggota")) || [];
+  let item = data[index];
+
+  document.getElementById("nama").value = item.nama;
+  document.getElementById("jk").value = item.jk;
+  document.getElementById("statusAnggota").value = item.statusAnggota;
+  document.getElementById("code").value = item.code;
+  document.getElementById("hp").value = item.hp;
+  document.getElementById("divisi").value = item.divisi;
+  document.getElementById("onoff").value = item.onoff;
+
+  // hapus data lama
+  data.splice(index, 1);
+  localStorage.setItem("anggota", JSON.stringify(data));
+
+  tampilkanAnggota();
+  updateTotal();
 }
 
 // CLEAR FORM
