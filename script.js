@@ -35,6 +35,23 @@ function logout() {
   window.location.href = "index.html";
 }
 
+// ================= ROLE =================
+function cekRole() {
+  const role = localStorage.getItem("role");
+
+  if (role === "USER") {
+
+    const form = document.getElementById("formAnggota");
+    if (form) form.style.display = "none";
+
+    const btnHapus = document.getElementById("btnHapusSemua");
+    if (btnHapus) btnHapus.style.display = "none";
+
+    const menuPengaturan = document.getElementById("menuPengaturan");
+    if (menuPengaturan) menuPengaturan.style.display = "none";
+  }
+}
+
 // ================= ANGGOTA =================
 
 // TAMBAH / EDIT
