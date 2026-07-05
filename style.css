@@ -1,84 +1,134 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
 }
 
 body{
-background:#000;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-overflow:hidden;
+  background:#000;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  overflow:hidden;
 }
 
+/* MATRIX BACKGROUND */
 .matrix{
-position:fixed;
-width:100%;
-height:100%;
-background:linear-gradient(rgba(0,255,0,.08),rgba(0,255,0,.08));
-background-color:#000;
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:linear-gradient(rgba(0,255,0,.08),rgba(0,255,0,.08));
+  background-color:#000;
+  z-index:-1;
 }
 
+/* LOGIN BOX */
 .login-box{
-position:relative;
-width:90%;
-max-width:360px;
-background:rgba(0,0,0,.85);
-border:2px solid #00ff66;
-border-radius:15px;
-padding:25px;
-text-align:center;
-box-shadow:0 0 20px #00ff66;
+  position:relative;
+  width:90%;
+  max-width:360px;
+  background:rgba(0,0,0,.85);
+  border:2px solid #00ff66;
+  border-radius:15px;
+  padding:25px;
+  text-align:center;
+  box-shadow:0 0 20px #00ff66;
 }
 
 h1{
-color:#00ff66;
-margin-bottom:10px;
+  color:#00ff66;
+  margin-bottom:10px;
 }
 
 .sub{
-color:#fff;
-margin-bottom:15px;
+  color:#fff;
+  margin-bottom:15px;
 }
 
 .visi{
-color:#00ff66;
-font-size:14px;
-line-height:24px;
-margin-bottom:20px;
+  color:#00ff66;
+  font-size:14px;
+  line-height:24px;
+  margin-bottom:20px;
 }
 
 input{
-width:100%;
-padding:12px;
-margin:10px 0;
-background:#111;
-border:1px solid #00ff66;
-border-radius:8px;
-color:#fff;
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  background:#111;
+  border:1px solid #00ff66;
+  border-radius:8px;
+  color:#fff;
 }
 
 button{
-width:100%;
-padding:12px;
-background:#00ff66;
-color:#000;
-border:none;
-border-radius:8px;
-font-size:16px;
-font-weight:bold;
-cursor:pointer;
+  width:100%;
+  padding:12px;
+  background:#00ff66;
+  color:#000;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
 }
 
 button:hover{
-background:#00cc55;
+  background:#00cc55;
 }
 
 .footer{
-margin-top:20px;
-color:#66ff99;
-font-size:12px;
+  margin-top:20px;
+  color:#66ff99;
+  font-size:12px;
+}
+
+/* ========================= */
+/* DASHBOARD STYLE */
+/* ========================= */
+
+.sidebar{
+  width:200px;
+  height:100vh;
+  position:fixed;
+  left:0;
+  top:0;
+  background:#001a00;
+  padding:20px;
+  box-shadow:0 0 10px #00ff66;
+}
+
+.sidebar h2{
+  color:#00ff66;
+  margin-bottom:15px;
+}
+
+.sidebar a{
+  display:block;
+  color:#00ff66;
+  text-decoration:none;
+  margin:12px 0;
+  font-size:14px;
+}
+
+.sidebar a:hover{
+  color:#ffffff;
+}
+
+.main{
+  margin-left:220px;
+  padding:20px;
+  color:#00ff66;
+}
+
+.card{
+  border:1px solid #00ff66;
+  padding:15px;
+  margin-top:15px;
+  border-radius:10px;
+  box-shadow:0 0 10px #00ff66;
+  background:rgba(0,0,0,.6);
 }
