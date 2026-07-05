@@ -37,6 +37,7 @@
 
   <p>Selamat datang di sistem Paguyuban Manggarai</p>
 
+  <!-- CARD STATISTIK -->
   <div class="card">
     <h3>Total Anggota</h3>
     <p>120 User</p>
@@ -52,7 +53,51 @@
     <p>🟢 ONLINE</p>
   </div>
 
+  <!-- ========================= -->
+  <!-- FORM ANGGOTA (BARU) -->
+  <!-- ========================= -->
+
+  <div class="card">
+
+    <h3>➕ TAMBAH ANGGOTA</h3>
+
+    <input type="text" id="nama" placeholder="Nama">
+
+    <select id="jk">
+      <option value="">Jenis Kelamin</option>
+      <option value="Laki-laki">Laki-laki</option>
+      <option value="Perempuan">Perempuan</option>
+    </select>
+
+    <input type="text" id="statusAnggota" placeholder="Status Anggota">
+    <input type="text" id="code" placeholder="Code Anggota">
+    <input type="text" id="hp" placeholder="No HP">
+    <input type="text" id="divisi" placeholder="PT / Divisi">
+
+    <select id="onoff">
+      <option value="">Status ON/OFF</option>
+      <option value="ON">ON</option>
+      <option value="OFF">OFF</option>
+    </select>
+
+    <button onclick="tambahAnggota()">Simpan</button>
+
+  </div>
+
+  <!-- LIST ANGGOTA -->
+  <div class="card">
+
+    <h3>📋 DAFTAR ANGGOTA</h3>
+
+    <ul id="listAnggota"></ul>
+
+  </div>
+
 </div>
+
+<script>
+  tampilkanAnggota();
+</script>
 
 </body>
 </html>
